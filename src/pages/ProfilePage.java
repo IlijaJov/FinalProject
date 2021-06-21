@@ -84,12 +84,12 @@ public class ProfilePage extends BasicPage {
 //	akciju klik na Upload dugme 
 //○	Skripta: arguments[0].click();
 //●	metodu koja otprema profilnu sliku - kao parametar se prosleđuje putanja do fajla, tj. u ovom slučaju do slike
-	public void inputImg() throws InterruptedException {
+	public void changeImg(String imgPath) throws InterruptedException {
 		WebElement addFile = driver.findElement(By.xpath("//a[@title='Uplaod']"));
 		js.executeScript("arguments[0].click();", addFile);
 		Thread.sleep(500);
 		WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
-		upload.sendKeys("C:\\Users\\Ilija\\Desktop\\New folder (3)\\test.png");
+		upload.sendKeys(imgPath);
 	}
 	
 	//●	metodu koja briše profilnu sliku
