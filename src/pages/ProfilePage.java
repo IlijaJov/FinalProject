@@ -104,6 +104,7 @@ public class ProfilePage extends BasicPage {
 	//●	metodu koja menja sve osnovne informacije korisnika - kao parametri se prosleđuju sve potrebne informacije
 	public void changeInfo(String firstName, String lastName, String address, String phoneNo,
 							String zipCode, String country, String state, String city) throws InterruptedException {
+		this.inputImg();
 		this.firstName().clear();
 		this.firstName().sendKeys(firstName);
 		Thread.sleep(100);
@@ -125,7 +126,7 @@ public class ProfilePage extends BasicPage {
 		Thread.sleep(1000);
 		this.city().selectByVisibleText(city);
 		Thread.sleep(1000);
-		//saveInfoBtn().click();
+		saveInfoBtn().click();
 		
 	}
 	
