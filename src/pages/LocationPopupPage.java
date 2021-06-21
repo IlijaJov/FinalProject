@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LocationPopupPage extends BasicPage {
 
-	public LocationPopupPage(WebDriver driver, WebDriverWait wait, JavascriptExecutor js) {
-		super(driver, wait, js);
+	public LocationPopupPage(WebDriver driver, WebDriverWait wait, JavascriptExecutor js, Actions actions) {
+		super(driver, wait, js, actions);
 	}
 
 //	get metoda za element koji prikazuje lokaciju u hederu 
