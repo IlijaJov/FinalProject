@@ -33,12 +33,9 @@ public class MealPage extends BasicPage {
 		driver.findElement(By.xpath("//a[@title='Favorite']")).click();
 	}
 //	metodu koja dodaje jelo u korpu - kao parametar se prosleđuje količina
-	public void addMeal(String meal, int quantity) throws InterruptedException {
-		this.mealsBtn().click();
-		Thread.sleep(2000);
-		driver.navigate().to(meal);
-		Thread.sleep(2000);
-		this.quantityBtn().sendKeys(Keys.BACK_SPACE);
+	public void addMeal(int quantity) throws InterruptedException {
+		Thread.sleep(500);
+		this.quantityBtn().sendKeys(Keys.DELETE);
 		Thread.sleep(500);
 		this.quantityBtn().sendKeys(String.valueOf(quantity));
 		Thread.sleep(500);
