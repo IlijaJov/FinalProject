@@ -25,8 +25,8 @@ public class ProfileTest extends BasicTest {
 		driver.navigate().to(baseURL + "guest-user/login-form");
 		Thread.sleep(1000);
 		locationPopupPage.closePopup();
+		
 		loginPage.logIn(username, password);
-
 		Assert.assertTrue(notificationSystemPage.notificationMsg().contains("Login Successfull"),
 												"The Login Successfull message is not visible.");
 		
