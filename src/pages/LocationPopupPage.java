@@ -25,7 +25,7 @@ public class LocationPopupPage extends BasicPage {
 	}
 //		getKeyword()
 //		//*[@id='locality_keyword']
-	public WebElement getKeyword(){
+	public WebElement getKeyword() {
 		return driver.findElement(By.xpath("//*[@id='locality_keyword']"));
 	}
 	
@@ -63,7 +63,9 @@ public class LocationPopupPage extends BasicPage {
 //		prvi argument skripte je location input
 //		drugi argument skripte je vrednost pročitanog atributa iz drugog koraka.
 //		Klikće na submit element preko skripte arguments[0].click();
-	public void setLocation(String locationName) {
+	public void setLocation(String locationName) throws InterruptedException {
+		this.getLocation().click();
+		Thread.sleep(100);
 		this.getKeyword().click();
 		String location = this.getLocationItem(locationName).getAttribute("data-value");
 		this.js.executeScript("arguments[0].value=arguments[1];", this.getLocationInput(), location);
