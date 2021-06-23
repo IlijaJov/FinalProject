@@ -52,7 +52,7 @@ public class SearchTest extends BasicTest {
 			Thread.sleep(1000);
 			
 //			verifikujte da je broj rezultata na stranici isti kao u fajlu
-			sa.assertEquals(numOfMeals,numOfResults);
+			sa.assertEquals(numOfMeals,numOfResults, "Number of results do not match.");
 			
 //		verifikujte da je svaki rezultat na stranici redom prikazan kao u fajlu
 		for (int j = 0; j < searchResultPage.numOfResults(); j++) {
@@ -63,7 +63,7 @@ public class SearchTest extends BasicTest {
 			String mealNamePage = searchResultPage.mealNames().get(j);
 			Thread.sleep(500);
 				
-			sa.assertTrue(mealNamePage.contains(mealNameSheet), "Names don't match");
+			sa.assertTrue(mealNamePage.contains(mealNameSheet), "Names aren't displayed in same order.");
 			Thread.sleep(500);
 			}
 			sa.assertAll();
