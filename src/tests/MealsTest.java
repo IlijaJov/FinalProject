@@ -111,6 +111,7 @@ public class MealsTest extends BasicTest {
 			mealPage.addMeal(quantity);
 			sa.assertTrue(notificationSystemPage.notificationMsg().contains("Meal Added To Cart"),
 													"The Meal Added To Cart message is not visible.");
+			
 		}
 		
 //		●	obrišite sve stavke iz korpe
@@ -118,6 +119,7 @@ public class MealsTest extends BasicTest {
 		
 		cartSummaryPage.clearAll();
 		Assert.assertTrue(notificationSystemPage.notificationMsg().contains("All meals removed from Cart successfully"),
-				"The All meals removed from Cart successfully message is not visible.");	
+				"The All meals removed from Cart successfully message is not visible.");
+		sa.assertAll();
 	}
 }
