@@ -25,6 +25,7 @@ import pages.LoginPage;
 import pages.MealPage;
 import pages.NotificationSystemPage;
 import pages.ProfilePage;
+import pages.SearchResultPage;
 
 
 
@@ -39,6 +40,7 @@ public abstract class BasicTest {
 	protected AuthPage authPage;
 	protected MealPage mealPage;
 	protected CartSummaryPage cartSummaryPage;
+	protected SearchResultPage searchResultPage;
 	
 	protected WebDriverWait wait;
 	protected JavascriptExecutor js;
@@ -65,6 +67,7 @@ public abstract class BasicTest {
 		authPage = new AuthPage(driver, wait, js, actions);
 		mealPage = new MealPage(driver, wait, js, actions);
 		cartSummaryPage = new CartSummaryPage(driver, wait, js, actions);
+		searchResultPage = new SearchResultPage(driver, wait, js, actions);
 	}
 	
 	@AfterMethod
