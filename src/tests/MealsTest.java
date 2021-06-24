@@ -43,7 +43,6 @@ public class MealsTest extends BasicTest {
 												"The Meal Added To Cart message is not visible.");
 	}
 	
-	
 	@Test
 	public void addMealToFavorites() throws InterruptedException {
 
@@ -110,8 +109,7 @@ public class MealsTest extends BasicTest {
 			driver.navigate().to(mealURL);
 			mealPage.addMeal(quantity);
 			sa.assertTrue(notificationSystemPage.notificationMsg().contains("Meal Added To Cart"),
-													"The Meal Added To Cart message is not visible.");
-			
+													"The Meal Added To Cart message is not visible.");	
 		}
 		
 //		●	obrišite sve stavke iz korpe
