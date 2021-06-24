@@ -3,8 +3,8 @@
 <suite name="YoMeals">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="tests.MealsTest"/>
       <class name="tests.ProfileTest"/>
+      <class name="tests.MealsTest"/>
       <class name="tests.SearchTest"/>
     </classes>
   </test> <!-- Test -->
