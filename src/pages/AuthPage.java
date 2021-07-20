@@ -13,9 +13,7 @@ public class AuthPage extends BasicPage {
 
 	public AuthPage(WebDriver driver, WebDriverWait wait, JavascriptExecutor js, Actions actions) {
 		super(driver, wait, js, actions);
-	}
-	
-//	get metode za sve potrebne elemente sa stranice   
+	} 
 	
 	public WebElement account() {
 		return driver.findElement(By.xpath("//a[@class='after-arrow user-trigger-js']"));
